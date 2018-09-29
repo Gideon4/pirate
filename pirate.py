@@ -31,7 +31,7 @@ def buttonclick():
     pname = mygen.createname()
     
     #show it on the screen
-    output.config(text = pname, font = ft, image = banner, compound = CENTER)
+    output.config(text = pname, font = "Gabriola 20", image = banner, compound = CENTER)
 
 root = Tk()
 
