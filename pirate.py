@@ -14,9 +14,23 @@ class Piratename () :
         self.originallast = lastname
 
     def createname (self) :
-        x = random.randint(0,len(self.firstlist)-1)
-        y = random.randint(0,len(self.lastlist)-1)
-        return self.firstlist[x] + self.lastlist[y]
+       a = self.originalfirst[-1:]
+       b = self.originallast[-1:]
+       
+       a = a.upper()
+       b = b.upper()
+
+       finala = ord(a)
+       finalb = ord(b)
+
+       finala -= 65
+       finalb -= 65
+
+       # use mod to make list wrap around
+       indexa = finala % len(self.firstlist)
+       indexb = finalb % len(self.lastlist)
+
+       return self.firstlist[indexa] + " " + self.lastlist[indexb]
 
 def buttonclick():
     
